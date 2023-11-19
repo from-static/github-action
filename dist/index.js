@@ -2778,7 +2778,7 @@ async function run() {
             throw Error(`No renderer found for type: ${config.type}`);
         }
         await (0, promises_1.mkdir)('out');
-        await (0, promises_1.writeFile)('out/index.html', config.version);
+        await (0, promises_1.writeFile)('out/index.html', output);
     }
     catch (error) {
         // Fail the workflow run if an error occurs

@@ -37,8 +37,7 @@ export async function run(): Promise<void> {
     }
 
     await mkdir('out')
-
-    await writeFile('out/index.html', config.version)
+    await writeFile('out/index.html', output)
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
