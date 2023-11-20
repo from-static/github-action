@@ -2763,7 +2763,7 @@ async function run() {
         if (!file) {
             throw Error(`Unable to locate ${path}.`);
         }
-        (0, node_child_process_1.execSync)(`npx github:from-static/cli build --path=${path}`);
+        (0, node_child_process_1.execSync)(`npx https://github.com/from-static/cli.git --path=${path}`);
     }
     catch (error) {
         // Fail the workflow run if an error occurs
