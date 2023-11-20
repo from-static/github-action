@@ -15,7 +15,7 @@ export async function run(): Promise<void> {
       throw Error(`Unable to locate ${path}.`)
     }
 
-    execSync(`static build --path=${file}`)
+    execSync(`static build --path=${path}`)
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
