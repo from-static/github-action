@@ -15,6 +15,10 @@ export async function run(): Promise<void> {
       throw Error(`Unable to locate ${path}.`)
     }
 
+    execSync(
+      'git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "git@github.com:"'
+    )
+
     core.debug(`Building using from-static/cli ...`)
     execSync(`npx https://github.com/from-static/cli.git build --path=${path}`)
   } catch (error) {

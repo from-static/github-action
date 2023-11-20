@@ -2763,6 +2763,7 @@ async function run() {
         if (!file) {
             throw Error(`Unable to locate ${path}.`);
         }
+        (0, node_child_process_1.execSync)('git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "git@github.com:"');
         core.debug(`Building using from-static/cli ...`);
         (0, node_child_process_1.execSync)(`npx https://github.com/from-static/cli.git build --path=${path}`);
     }
