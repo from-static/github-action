@@ -1,7 +1,8 @@
-import { readFile, mkdir, writeFile } from 'node:fs/promises'
+import { readFile } from 'node:fs/promises'
 import { execSync } from 'node:child_process'
 
 import * as core from '@actions/core'
+import * as github from '@actions/github'
 
 export async function run(): Promise<void> {
   try {
@@ -20,7 +21,9 @@ export async function run(): Promise<void> {
     )
 
     core.debug(`Building using from-static/cli ...`)
-    execSync(`npx https://github.com/from-static/cli.git build --path=${path}`)
+    execSync(
+      `npx https://github.com/from-static/cli.git build --path=${path} --next-base-path="/${github.context.repo.repo}"`
+    )
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
