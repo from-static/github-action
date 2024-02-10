@@ -6,13 +6,18 @@
 [![CodeQL](https://github.com/from-static/github-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/from-static/github-action/actions/workflows/codeql-analysis.yml)
 [![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
-The `from-static/github-action` is used to generate a static site from a `static.json` file using the [`from-static` CLI](https://github.com/from-static/cli).
+The `from-static/github-action` is used to generate a static site from a
+`static.json` file using the
+[`from-static` CLI](https://github.com/from-static/cli).
 
 ## Usage
 
-Used in conjunction with GitHub's pages-related actions, this action can be used to generate a static site from a `static.json` file and deploy it to GitHub Pages.
+Used in conjunction with GitHub's pages-related actions, this action can be used
+to generate a static site from a `static.json` file and deploy it to GitHub
+Pages.
 
-The workflow below is used in most `static` template repositories to enable continuous deployment to GitHub Pages.
+The workflow below is used in most `static` template repositories to enable
+continuous deployment to GitHub Pages.
 
 ```yaml
 name: static
@@ -33,7 +38,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
