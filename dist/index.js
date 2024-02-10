@@ -28515,6 +28515,9 @@ async function run() {
         }
         (0, node_child_process_1.execSync)('git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "git@github.com:"');
         core.debug(`Building using from-static/cli ...`);
+        /**
+         * Execute the from-static/cli build command, using the current repository as the base path.
+         */
         (0, node_child_process_1.execSync)(`npx https://github.com/from-static/cli.git build --path=${path} --next-base-path="/${github.context.repo.repo}"`);
     }
     catch (error) {
