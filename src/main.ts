@@ -21,6 +21,9 @@ export async function run(): Promise<void> {
     )
 
     core.debug(`Building using from-static/cli ...`)
+    /**
+     * Execute the from-static/cli build command, using the current repository as the base path.
+     */
     execSync(
       `npx https://github.com/from-static/cli.git build --path=${path} --next-base-path="/${github.context.repo.repo}"`
     )
