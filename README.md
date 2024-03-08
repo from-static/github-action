@@ -1,10 +1,8 @@
-# from-static/github-action
+# We suggest using our [reusable workflows](https://github.com/from-static/actions) rather than using this action directly.
 
-[![GitHub Super-Linter](https://github.com/from-static/github-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
-![CI](https://github.com/from-static/github-action/actions/workflows/ci.yml/badge.svg)
-[![Check dist/](https://github.com/from-static/github-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/from-static/github-action/actions/workflows/check-dist.yml)
-[![CodeQL](https://github.com/from-static/github-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/from-static/github-action/actions/workflows/codeql-analysis.yml)
-[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+This repository will likely be deprecated in the future.
+
+# from-static/github-action
 
 The `from-static/github-action` is used to generate a static site from a
 `static.json` file using the
